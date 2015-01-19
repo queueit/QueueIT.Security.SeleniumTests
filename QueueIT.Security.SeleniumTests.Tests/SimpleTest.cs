@@ -115,8 +115,8 @@ namespace QueueIT.Security.SeleniumTests.Tests
             // expect not to have token in querystring
             Assert.Null(simplePage.GetKnownUserToken());
 
-            // expect token in cookie
-            Assert.NotNull(simplePage.GetKnownUserToken(true));
+            // expect token not in cookie
+            Assert.Null(simplePage.GetKnownUserToken(true));
         }
 
         [Theory]
